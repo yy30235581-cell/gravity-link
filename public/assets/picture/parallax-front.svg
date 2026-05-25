@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4096" height="1024" viewBox="0 0 4096 1024">
+  <defs>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#14283a"/>
+      <stop offset=".55" stop-color="#07121c"/>
+      <stop offset="1" stop-color="#02060b"/>
+    </linearGradient>
+    <filter id="neon" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="mesh" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M0 42L42 0M-10 10L10-10M32 52L52 32" stroke="#49748c" stroke-opacity=".42" stroke-width="4"/>
+    </pattern>
+    <symbol id="factory" viewBox="0 0 720 360">
+      <path d="M0 188h72v-78h74V58h144v98h92v-44h78v76h210v172H0z" fill="#05101a" stroke="#12293a" stroke-width="6"/>
+      <path d="M184 0h12v90h-12zM286 12h14v120h-14zM410 70h12v104h-12z" fill="#03070d"/>
+      <g fill="#4cd6ff" opacity=".42">
+        <rect x="126" y="132" width="10" height="36"/><rect x="158" y="132" width="10" height="36"/><rect x="236" y="96" width="10" height="36"/>
+        <rect x="270" y="96" width="10" height="36"/><rect x="312" y="178" width="10" height="36"/><rect x="530" y="208" width="10" height="36"/>
+      </g>
+      <rect x="360" y="214" width="150" height="58" fill="#071b28" stroke="#2bdcff" stroke-opacity=".45" stroke-width="4"/>
+      <text x="435" y="252" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#5beaff">LINK_A12</text>
+      <text x="435" y="287" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ff6767">OFFLINE</text>
+    </symbol>
+    <symbol id="deck" viewBox="0 0 1024 210">
+      <rect x="0" y="98" width="1024" height="86" fill="url(#metal)" stroke="#132b3d" stroke-width="5"/>
+      <rect x="0" y="90" width="1024" height="14" fill="#07131c"/>
+      <rect x="0" y="184" width="1024" height="26" fill="#02060b"/>
+      <path d="M0 112H1024" stroke="#58d9ff" stroke-width="4" stroke-opacity=".45" filter="url(#neon)"/>
+      <g stroke="#223d50" stroke-width="5">
+        <path d="M58 90V34M142 90V42M226 90V34M310 90V42M394 90V34M478 90V42M562 90V34M646 90V42M730 90V34M814 90V42M898 90V34"/>
+        <path d="M0 38H1024"/>
+      </g>
+      <rect x="0" y="34" width="1024" height="56" fill="url(#mesh)" opacity=".72"/>
+    </symbol>
+  </defs>
+  <g opacity=".98">
+    <use href="#factory" x="145" y="330" width="720" height="360"/>
+    <use href="#factory" x="3180" y="280" width="720" height="360"/>
+    <use href="#deck" x="0" y="610" width="1024" height="210"/>
+    <use href="#deck" x="1024" y="610" width="1024" height="210"/>
+    <use href="#deck" x="2048" y="610" width="1024" height="210"/>
+    <use href="#deck" x="3072" y="610" width="1024" height="210"/>
+  </g>
+  <g filter="url(#neon)" opacity=".85">
+    <rect x="290" y="675" width="180" height="8" fill="#47dfff"/>
+    <rect x="1380" y="673" width="260" height="7" fill="#7bdfff"/>
+    <rect x="2390" y="675" width="220" height="7" fill="#47dfff"/>
+    <rect x="3650" y="675" width="190" height="8" fill="#47dfff"/>
+  </g>
+</svg>

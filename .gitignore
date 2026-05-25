@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.corepack/
+.npm-cache/
+.pnpm-store/
+.tools/
+.playwright-temp/
+.mgx/
+*.log
+*.err.log
+parallax-*.png
+ui-game-over-verify.png
+.env
+.env.local
