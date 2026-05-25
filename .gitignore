@@ -8,7 +8,7 @@ dist/
 .mgx/
 *.log
 *.err.log
-parallax-*.png
+/parallax-*.png
 ui-game-over-verify.png
 .env
 .env.local
