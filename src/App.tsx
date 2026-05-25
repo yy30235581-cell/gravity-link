@@ -26,7 +26,7 @@ const App = () => (
     {/* MODULE_PROVIDERS_END */}
     <TooltipProvider>
       <Toaster />
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <AppRoutes />
       </BrowserRouter>
     </TooltipProvider>
