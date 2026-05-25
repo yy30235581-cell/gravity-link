@@ -9,6 +9,7 @@ dist/
 *.log
 *.err.log
 /parallax-*.png
+/public/assets/picture/parallax-preview.png
 ui-game-over-verify.png
 .env
 .env.local
