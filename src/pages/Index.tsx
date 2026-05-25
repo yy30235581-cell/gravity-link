@@ -5,6 +5,8 @@ import GameEngine from '@/game/GameEngine';
 import { GameStatus } from '@/game/types';
 import { soundManager } from '@/game/sounds';
 
+const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+
 const LEVEL_NAMES: Record<number, string> = {
   1: '关卡 1 // 基础链路',
   2: '关卡 2 // 激光封锁区',
@@ -19,13 +21,13 @@ const LEVEL_DESCRIPTIONS: Record<number, string> = {
   4: '上方会随机坍塌红色柱子，小球被红柱撞到就会死亡。',
 };
 
-const START_IMAGE_URL = '/assets/picture/gravity-link-start-cyberpunk-v2.png';
-const HEALTH_ICON_URL = '/assets/ui/health/cyber-heart.png';
+const START_IMAGE_URL = assetUrl('/assets/picture/gravity-link-start-cyberpunk-v2.png');
+const HEALTH_ICON_URL = assetUrl('/assets/ui/health/cyber-heart.png');
 const GAME_OVER_ASSETS = {
-  status: '/assets/ui/game-over/critical-status.png',
-  title: '/assets/ui/game-over/mission-failed-title.png',
-  restart: '/assets/ui/game-over/restart-label.png',
-  mainMenu: '/assets/ui/game-over/main-menu-label.png',
+  status: assetUrl('/assets/ui/game-over/critical-status.png'),
+  title: assetUrl('/assets/ui/game-over/mission-failed-title.png'),
+  restart: assetUrl('/assets/ui/game-over/restart-label.png'),
+  mainMenu: assetUrl('/assets/ui/game-over/main-menu-label.png'),
 };
 
 type TutorialStep = 'jump' | 'hook' | null;

@@ -43,11 +43,12 @@ const LASER_COOLDOWN_AFTER_CUT = 3.2;
 const LEVEL_2_HAZARD_SPACING = 560;
 const MAX_HEALTH_PER_LEVEL = 3;
 const DAMAGE_INVULNERABLE_TIME = 1.15;
+const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
 
 const PARALLAX_LAYER_DEFS = [
-  { src: '/assets/picture/parallax-far.png?v=20260525-user-bg', speed: 0.06, opacity: 1 },
-  { src: '/assets/picture/parallax-mid.png?v=20260525-user-bg', speed: 0.16, opacity: 1 },
-  { src: '/assets/picture/parallax-front.png?v=20260525-user-bg', speed: 0.34, opacity: 1 },
+  { src: assetUrl('/assets/picture/parallax-far.png?v=20260525-user-bg'), speed: 0.06, opacity: 1 },
+  { src: assetUrl('/assets/picture/parallax-mid.png?v=20260525-user-bg'), speed: 0.16, opacity: 1 },
+  { src: assetUrl('/assets/picture/parallax-front.png?v=20260525-user-bg'), speed: 0.34, opacity: 1 },
 ];
 
 const clamp = (value: number, min: number, max: number) => Math.max(min, Math.min(max, value));

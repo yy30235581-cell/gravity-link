@@ -1,3 +1,5 @@
+const assetUrl = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+
 class SoundManager {
   private ctx: AudioContext | null = null;
   private bgmInterval: ReturnType<typeof setInterval> | null = null;
@@ -11,10 +13,10 @@ class SoundManager {
   private readonly musicVolume = 0.42;
   private readonly sfxVolume = 0.72;
   private readonly tracks = {
-    menu: '/assets/audio/menu-bgm.wav',
-    game: ['/assets/audio/game-bgm.wav', '/assets/audio/game-bgm-2.wav'],
-    gameOver: '/assets/audio/game-over-bgm.wav',
-    laser: '/assets/audio/laser.wav',
+    menu: assetUrl('/assets/audio/menu-bgm.wav'),
+    game: [assetUrl('/assets/audio/game-bgm.wav'), assetUrl('/assets/audio/game-bgm-2.wav')],
+    gameOver: assetUrl('/assets/audio/game-over-bgm.wav'),
+    laser: assetUrl('/assets/audio/laser.wav'),
   };
 
   private init() {
