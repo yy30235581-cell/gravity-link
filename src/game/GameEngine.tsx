@@ -1126,10 +1126,11 @@ const GameEngine: React.FC<GameEngineProps> = ({
       ctx.globalAlpha = 1;
 
       if (p.jumpCount > 0 && !p.isHooked) {
+        const jumpLabel = `3/${Math.max(1, 4 - p.jumpCount)}`;
         ctx.font = 'bold 12px monospace';
         ctx.fillStyle = playerColor;
         ctx.textAlign = 'center';
-        ctx.fillText(`${p.jumpCount}/3`, p.pos.x, p.pos.y - 16);
+        ctx.fillText(jumpLabel, p.pos.x, p.pos.y - 16);
         ctx.textAlign = 'start';
       }
 
@@ -1199,12 +1200,8 @@ const GameEngine: React.FC<GameEngineProps> = ({
       }
       p.jumpCount = 0;
     } else {
-      if (currentLevelRef.current === 1 && p.jumpCount >= 1) {
-        if (handleHook()) return;
-      }
       p.jumpCount++;
       if (p.jumpCount > 3) {
-        // Stay capped; death comes from hazards.
         p.jumpCount = 3;
         return;
       }
