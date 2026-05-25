@@ -371,7 +371,7 @@ export default function Index() {
             className={
               status === GameStatus.START
                 ? 'absolute inset-0 overflow-hidden'
-                : 'relative w-full max-w-[1024px] aspect-[1024/600] bg-black/40 overflow-hidden'
+                : 'absolute inset-0 bg-black/40 overflow-hidden'
             }
           >
             {status !== GameStatus.START && (

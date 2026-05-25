@@ -1332,7 +1332,7 @@ const GameEngine: React.FC<GameEngineProps> = ({
       width={GAME_WIDTH}
       height={GAME_HEIGHT}
       tabIndex={0}
-      className="w-full h-auto block bg-black"
+      className="w-full h-full block bg-black"
     />
   );
 };
